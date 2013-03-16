@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Unbenanntes Dokument</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../src/jquery-ajaxwrapper.js"></script>
+<script>
+$(document).ready(function() {
+	$('body').on("click", "a.ajax", function() {
+		return $(this).ajaxwrapper();
+	});
+	
+	$('body').on("submit", "form.ajax", function() {
+		return $(this).ajaxwrapper();
+	});
+});
+</script>
+</head>
+
+<body>
+
+<div id="simpleLink"></div>
+
+<a href="ajaxcontent.html" target="#simpleLink" class="ajax">Simple Ajax Link</a>
+
+<hr/>
+
+<div id="simpleForm"></div>
+
+<form action="formcontent.php" target="#simpleForm" class="ajax" method="post" enctype="multipart/form-data">
+	<fieldset>
+    	<legend>Simple Form</legend>
+        <label><input name="title" type="radio" value="Mrs" />Mrs.</label> <label><input name="title" type="radio" value="Mr" />Mr.</label> <br/>
+        <label for="firstname">First Name:</label><input name="firstname" type="text" /><br/>
+        <label><input name="newsletter" type="checkbox" value="yes" />Newsletter</label><br/><br/>
+        Interests:<br/>
+        <label><input name="interest[]" type="checkbox" value="fishing" />Fishing</label><br/>
+        <label><input name="interest[]" type="checkbox" value="sport" />Sport</label><br/>
+        <label><input name="interest[]" type="checkbox" value="pizza" />Pizza</label><br/>
+        <label><input name="file" type="file" />File</label><br/>    
+        <button name="firstbutton" value="firstbutton" type="submit">Send Form with first button</button><br/>
+        <button name="secondbutton" value="secondbutton" type="submit">Send Form with second button</button>
+    </fieldset>
+</form>
+
+</body>
+</html>
