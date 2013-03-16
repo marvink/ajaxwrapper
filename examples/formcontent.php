@@ -20,8 +20,10 @@ Form Content
 	}
 	?>
     </dd>
+    <? if (isset($_FILES['file']['name'])) { ?>
     <dt>Filename:</dt>
     <dd><?=$_FILES['file']['name']?></dd>
+    <? } ?>
 </dl>
 </div>
 
