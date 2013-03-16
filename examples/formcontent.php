@@ -29,6 +29,8 @@ Form Content
 dd,dt {
 	width:50%;
 	float:left;
-	margin:0px;
+	display:block;
+	margin:0px;    
+	min-height: 24px;
 }	
 </style>
