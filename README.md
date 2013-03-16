@@ -19,13 +19,13 @@ Usage
 5. That's it.
 
 <code>
-	$(document).ready(function() {
-		$('body').on("click", "a.ajax", function() {
-			return $(this).ajaxwrapper();
-		});
-	
-		$('body').on("submit", "form.ajax", function() {
-			return $(this).ajaxwrapper();
-		});
-	});
+    $(document).ready(function() {
+        $('body').on("click", "a.ajax", function() {
+            return $(this).ajaxwrapper();
+        });
+
+    $('body').on("submit", "form.ajax", function() {
+            return $(this).ajaxwrapper();
+        });
+    });
 </code>
