@@ -18,7 +18,7 @@ Usage
 4. Use jquery selectors in the target attributes for a-tags or form-tags. The target should be an existing div with the id or class. 
 5. That's it.
 
-
+<code>
 	$(document).ready(function() {
 		$('body').on("click", "a.ajax", function() {
 			return $(this).ajaxwrapper();
@@ -28,5 +28,4 @@ Usage
 			return $(this).ajaxwrapper();
 		});
 	});
-
-
+</code>
