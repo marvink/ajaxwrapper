@@ -19,7 +19,8 @@ Usage
 5. That's it.
 
 <code>
-    $(document).ready(function() {
+
+    $(document).ready(function() { 
         $('body').on("click", "a.ajax", function() {
             return $(this).ajaxwrapper();
         });
@@ -28,4 +29,5 @@ Usage
             return $(this).ajaxwrapper();
         });
     });
+
 </code>
