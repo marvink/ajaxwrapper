@@ -56,6 +56,7 @@
 			   values = $(this).serialize();
 			   
 			   values = values.concat("&" + button.attr("name") + "=" + button.val());
+			   button.removeAttr('clicked')
 			   
 				var request = $.ajax( {
 				  url : action,
