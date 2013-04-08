@@ -99,7 +99,11 @@ $(document).ready(function() {
 		$(this).attr("clicked", "true");
 	});
 	
-	$('input[type=submit], button[type=submit]').removeAttr('onclick');
+	$('input[type=submit], button[type=submit]').each(function() {
+		if ($(this).attr('onclick') == "return false" || $(this).attr('onclick') == "return false;") {
+			$(this).removeAttr('onclick');	
+		}
+	});
 });
 
 
