@@ -16,10 +16,10 @@
             	container = $(this).attr('target'),
             	action = $(this).attr('href');
 				
-			if ($(this).data('href') != "") {
+			if ($(this).data('href') != "" && $(this).data('href') != undefined) {
             	action = $(this).data('href');
           	}
-		   		
+			
 			var request = $.ajax({
 				url : action,
 				dataType: "html",
