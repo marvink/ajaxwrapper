@@ -15,6 +15,10 @@
 		   	var that = $(this),
             	container = $(this).attr('target'),
             	action = $(this).attr('href');
+				
+			if ($(this).data('href') != "") {
+            	action = $(this).data('href');
+          	}
 		   		
 			var request = $.ajax({
 				url : action,
@@ -94,6 +98,8 @@ $(document).ready(function() {
 	$('body').on('click',"input[type=submit], button[type=submit]", function() {
 		$(this).attr("clicked", "true");
 	});
+	
+	$('input[type=submit], button[type=submit]').removeAttr('onclick');
 });
 
 
