@@ -41,8 +41,8 @@
 			   container = $(this).attr('target'),
 			   timetamp = new Date().getTime();
 			   
-			   $(this).after("<iframe style='display:none' name='" + timetamp + "'></iframe>");
-			   $(this).attr('target', timetamp);
+			   form.after("<iframe style='display:none' name='" + timetamp + "'></iframe>");
+			   form.attr('target', timetamp);
 			   
 			   $('iframe[name='+timetamp+']').load(function() {
 					form.attr('target',container);
